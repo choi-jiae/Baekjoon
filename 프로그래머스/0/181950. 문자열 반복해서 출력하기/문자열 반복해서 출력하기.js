@@ -4,14 +4,12 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let input = []
+let input = [];
 
 rl.on('line', function (line) {
     input  = line.split(' ');
 }).on('close', function () {
-    var answer = ''
-    for (i = 0; i < Number(input[1]); i++){
-        answer += input[0]
-    }
-    console.log(answer);
+    const str = input[0];
+    const n = Number(input[1]);
+    console.log(str.repeat(n));
 });
