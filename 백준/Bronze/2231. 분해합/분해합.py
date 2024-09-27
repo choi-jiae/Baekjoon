@@ -2,9 +2,7 @@ N = int(input())
 
 found = False
 for num in range(1, N):
-    total = num
-    for n in str(num):
-        total += int(n)
+    total = num + sum(map(int, str(num)))
     
     if total == N:
         found = True
